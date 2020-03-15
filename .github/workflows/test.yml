@@ -15,6 +15,10 @@ jobs:
       with:
         node-version: 12
 
+    - name: init
+      run:
+        yarn install --frozen-lockfile
+
     - name: bundle test
       run:
         npx react-native bundle --entry-file index.js --bundle-output /dev/null
